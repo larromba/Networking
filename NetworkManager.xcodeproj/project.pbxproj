@@ -30,12 +30,13 @@
 		7F02A56D21AB6C98007A6ECD /* BaseOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */; };
 		7F02A56E21AB6C98007A6ECD /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56321AB6B3A007A6ECD /* Log.framework */; };
 		7F02A56F21AB6C98007A6ECD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56521AB6B3A007A6ECD /* Result.framework */; };
-		7F02A57021AB6C98007A6ECD /* TestExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56221AB6B3A007A6ECD /* TestExtensions.framework */; };
 		7F02A57221AB6D77007A6ECD /* FileDownloadOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */; };
 		7F02A57421AB6D8B007A6ECD /* HTTPVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */; };
 		7F02A57621AB6DE1007A6ECD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57521AB6DE1007A6ECD /* NetworkError.swift */; };
 		7F02A57921AB6EDC007A6ECD /* FileName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57821AB6EDC007A6ECD /* FileName.swift */; };
 		7F02A57D21AB6FED007A6ECD /* mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */; };
+		7F02A58221AB7D53007A6ECD /* TestExtensions.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7F02A56221AB6B3A007A6ECD /* TestExtensions.framework */; };
+		7F02A58321AB7D57007A6ECD /* TestExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56221AB6B3A007A6ECD /* TestExtensions.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,7 +105,6 @@
 				7F02A56D21AB6C98007A6ECD /* BaseOperation.framework in Frameworks */,
 				7F02A56E21AB6C98007A6ECD /* Log.framework in Frameworks */,
 				7F02A56F21AB6C98007A6ECD /* Result.framework in Frameworks */,
-				7F02A57021AB6C98007A6ECD /* TestExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +113,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7F02A53721AB642B007A6ECD /* NetworkManager.framework in Frameworks */,
+				7F02A58321AB7D57007A6ECD /* TestExtensions.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F02A58221AB7D53007A6ECD /* TestExtensions.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -586,6 +588,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,6 +611,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
