@@ -10,7 +10,7 @@ public struct FileResource {
         self.bundle = bundle
     }
 
-    func load() -> Data {
+    public func load() -> Data {
         let components = name.components(separatedBy: ".")
         guard let fileName = components.first, let fileExt = components.last else {
             log_error("invalid fileName: \(self)")
