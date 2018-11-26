@@ -1,0 +1,6 @@
+sources:
+  - ./NetworkManager
+templates:
+  - ./Templates
+output:
+  ./NetworkManager
