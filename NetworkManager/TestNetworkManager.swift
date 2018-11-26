@@ -5,12 +5,23 @@ import Log
 public struct FetchStub {
     let url: URL
     let resource: FileName
+
+    public init(url: URL, resource: FileName) {
+        self.url = url
+        self.resource = resource
+    }
 }
 
 public struct DownloadStub {
     let url: URL
     let writeURL: URL
     let data: Data
+
+    public init(url: URL, writeURL: URL, data: Data) {
+        self.url = url
+        self.writeURL = writeURL
+        self.data = data
+    }
 }
 
 public final class TestNetworkManager: NetworkManaging {

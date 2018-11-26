@@ -1,7 +1,7 @@
 import Foundation
 import Log
 
-typealias FileName = String
+public typealias FileName = String
 
 extension FileName {
     private class Dummy {}
