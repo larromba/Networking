@@ -218,7 +218,9 @@ public class MockFileManager: NSObject, FileManaging {
       }
     }
 
-    public init() {}
+    public override init() {
+      super.init()
+    }
 }
 
 public class MockNetworkManager: NSObject, NetworkManaging {
@@ -279,7 +281,9 @@ public class MockNetworkManager: NSObject, NetworkManaging {
       case name = "cancelAll3"
     }
 
-    public init() {}
+    public override init() {
+      super.init()
+    }
 }
 
 public class MockOperationQueue: NSObject, OperationQueable {
@@ -318,7 +322,9 @@ public class MockOperationQueue: NSObject, OperationQueable {
       case name = "cancelAllOperations2"
     }
 
-    public init() {}
+    public override init() {
+      super.init()
+    }
 }
 
 public class MockURLSession: NSObject, URLSessioning {
@@ -367,5 +373,7 @@ public class MockURLSession: NSObject, URLSessioning {
       }
     }
 
-    public init() {}
+    public override init() {
+      super.init()
+    }
 }
