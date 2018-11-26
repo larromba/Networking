@@ -217,6 +217,8 @@ public class MockFileManager: NSObject, FileManaging {
         case path = "fileExists(atPathpath:String).path"
       }
     }
+
+    public init() {}
 }
 
 public class MockNetworkManager: NSObject, NetworkManaging {
@@ -276,6 +278,8 @@ public class MockNetworkManager: NSObject, NetworkManaging {
     enum cancelAll3: String, _StringRawRepresentable {
       case name = "cancelAll3"
     }
+
+    public init() {}
 }
 
 public class MockOperationQueue: NSObject, OperationQueable {
@@ -313,6 +317,8 @@ public class MockOperationQueue: NSObject, OperationQueable {
     enum cancelAllOperations2: String, _StringRawRepresentable {
       case name = "cancelAllOperations2"
     }
+
+    public init() {}
 }
 
 public class MockURLSession: NSObject, URLSessioning {
@@ -360,4 +366,6 @@ public class MockURLSession: NSObject, URLSessioning {
         case completionHandler = "downloadTask(withurl:URL,completionHandler:@escaping(URL?,URLResponse?,Error?)->Void).completionHandler"
       }
     }
+
+    public init() {}
 }
