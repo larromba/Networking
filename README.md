@@ -5,7 +5,7 @@
 | [![Build Status](https://travis-ci.com/larromba/NetworkManager.svg?branch=master)](https://travis-ci.com/larromba/NetworkManager) | [![Build Status](https://travis-ci.com/larromba/NetworkManager.svg?branch=dev)](https://travis-ci.com/larromba/NetworkManager) |
 
 ## About
-A simple `NetworkManager` to manage making HTTP requests. Designed to be a dependency of your API service objects. Uses a custom Async / Await implementation.
+A simple network manager wrapping `URLSession` to manage making HTTP requests. Designed as a dependency to your API service objects. Uses a custom [async/await](https://github.com/larromba/asyncawait) implementation. 
 
 ## Installation
 
