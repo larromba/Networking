@@ -22,7 +22,6 @@
 		7F02A55D21AB671B007A6ECD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7F02A55C21AB671B007A6ECD /* README.md */; };
 		7F02A55F21AB695F007A6ECD /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55E21AB695F007A6ECD /* Mockable.swift */; };
 		7F02A56621AB6B3A007A6ECD /* AsyncAwait.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56121AB6B3A007A6ECD /* AsyncAwait.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		7F02A56721AB6B3A007A6ECD /* TestExtensions.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56221AB6B3A007A6ECD /* TestExtensions.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7F02A56821AB6B3A007A6ECD /* Log.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56321AB6B3A007A6ECD /* Log.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7F02A56921AB6B3A007A6ECD /* BaseOperation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7F02A56A21AB6B3A007A6ECD /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56521AB6B3A007A6ECD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -57,7 +56,6 @@
 			dstSubfolderSpec = 16;
 			files = (
 				7F02A56621AB6B3A007A6ECD /* AsyncAwait.framework in CopyFiles */,
-				7F02A56721AB6B3A007A6ECD /* TestExtensions.framework in CopyFiles */,
 				7F02A56821AB6B3A007A6ECD /* Log.framework in CopyFiles */,
 				7F02A56921AB6B3A007A6ECD /* BaseOperation.framework in CopyFiles */,
 				7F02A56A21AB6B3A007A6ECD /* Result.framework in CopyFiles */,
