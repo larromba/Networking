@@ -1,4 +1,4 @@
-@testable import NetworkManager
+@testable import Networking
 import XCTest
 
 final class NetworkManagerTests: XCTestCase {

@@ -1,11 +1,11 @@
 #import <Cocoa/Cocoa.h>
 
-//! Project version number for NetworkManager.
-FOUNDATION_EXPORT double NetworkManagerVersionNumber;
+//! Project version number for Networking.
+FOUNDATION_EXPORT double NetworkingVersionNumber;
 
-//! Project version string for NetworkManager.
-FOUNDATION_EXPORT const unsigned char NetworkManagerVersionString[];
+//! Project version string for Networking.
+FOUNDATION_EXPORT const unsigned char NetworkingVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <NetworkManager/PublicHeader.h>
+// In this header, you should import all the public headers of your framework using statements like #import <Networking/PublicHeader.h>
 
 
