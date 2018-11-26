@@ -1,18 +1,22 @@
 import Foundation
 import Log
 
-public typealias FileName = String
+public struct FileResource {
+    public let name: String
+    public let bundle: Bundle
 
-extension FileName {
-    private class Dummy {}
+    public init(name: String, bundle: Bundle) {
+        self.name = name
+        self.bundle = bundle
+    }
 
     func load() -> Data {
-        let components = self.components(separatedBy: ".")
+        let components = name.components(separatedBy: ".")
         guard let fileName = components.first, let fileExt = components.last else {
             log_error("invalid fileName: \(self)")
             return Data()
         }
-        guard let url = Bundle(for: Dummy.self).url(forResource: fileName, withExtension: fileExt) else {
+        guard let url = bundle.url(forResource: fileName, withExtension: fileExt) else {
             log_error("missing resource url")
             return Data()
         }
