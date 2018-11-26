@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NetworkManager.xcodeproj">
+      location = "self:/Users/larromba/Documents/Code Public/NetworkManager/Networking.xcodeproj">
    </FileRef>
 </Workspace>

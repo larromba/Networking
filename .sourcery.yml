@@ -1,6 +1,6 @@
 sources:
-  - ./NetworkManager
+  - ./Networking
 templates:
   - ./Templates
 output:
-  ./NetworkManager
+  ./Networking

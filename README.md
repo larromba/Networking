@@ -1,11 +1,11 @@
-# NetworkManager [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
+# Networking [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Open Source Love png1](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)
 
 | master  | dev |
 | ------------- | ------------- |
-| [![Build Status](https://travis-ci.com/larromba/NetworkManager.svg?branch=master)](https://travis-ci.com/larromba/NetworkManager) | [![Build Status](https://travis-ci.com/larromba/NetworkManager.svg?branch=dev)](https://travis-ci.com/larromba/NetworkManager) |
+| [![Build Status](https://travis-ci.com/larromba/Networking.svg?branch=master)](https://travis-ci.com/larromba/Networking) | [![Build Status](https://travis-ci.com/larromba/Networking.svg?branch=dev)](https://travis-ci.com/larromba/Networking) |
 
 ## About
-A simple network manager wrapping `URLSession` to manage making HTTP requests. Designed as a dependency to your API service objects. Uses a custom [async/await](https://github.com/larromba/asyncawait) implementation. 
+Simple networking code in Swift wrapping `URLSession` to manage making HTTP requests. Designed as a dependency to your API service objects. Uses a custom [async/await](https://github.com/larromba/asyncawait) implementation. 
 
 ## Installation
 
@@ -13,7 +13,7 @@ A simple network manager wrapping `URLSession` to manage making HTTP requests. D
 
 ```
 // Cartfile
-github "larromba/NetworkManager" ~> 1.0
+github "larromba/Networking" ~> 1.0
 ```
 
 ```
@@ -42,9 +42,9 @@ func doRequest() -> Async<MyObject> {
 
 ```
 
-`TestNetworkManager` can be used to load mock json for your tests
+`TestNetworking` can be used to load mock json for your tests
 
-`MockNetworkManager` is a dummy network instance for your tests
+`MockNetworking` is a dummy network instance for your tests
 
 `NetworkLog.isEnabled = true` turns on network logging
 

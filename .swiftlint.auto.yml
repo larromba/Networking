@@ -1,6 +1,6 @@
 included:
-- NetworkManager
-- NetworkManagerTests
+- Networking
+- NetworkingTests
 
 opt_in_rules:
 - trailing_whitespace

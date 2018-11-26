@@ -1,6 +1,6 @@
 included:
-  - NetworkManager
-  - NetworkManagerTests
+  - Networking
+  - NetworkingTests
 excluded:
   - Pods
   - Carthage

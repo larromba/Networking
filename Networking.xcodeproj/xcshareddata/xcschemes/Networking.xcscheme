@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F02A52C21AB642B007A6ECD"
-               BuildableName = "NetworkManager.framework"
-               BlueprintName = "NetworkManager"
-               ReferencedContainer = "container:NetworkManager.xcodeproj">
+               BuildableName = "Networking.framework"
+               BlueprintName = "Networking"
+               ReferencedContainer = "container:Networking.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "7F02A53521AB642B007A6ECD"
-               BuildableName = "NetworkManagerTests.xctest"
-               BlueprintName = "NetworkManagerTests"
-               ReferencedContainer = "container:NetworkManager.xcodeproj">
+               BuildableName = "NetworkingTests.xctest"
+               BlueprintName = "NetworkingTests"
+               ReferencedContainer = "container:Networking.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F02A52C21AB642B007A6ECD"
-            BuildableName = "NetworkManager.framework"
-            BlueprintName = "NetworkManager"
-            ReferencedContainer = "container:NetworkManager.xcodeproj">
+            BuildableName = "Networking.framework"
+            BlueprintName = "Networking"
+            ReferencedContainer = "container:Networking.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F02A52C21AB642B007A6ECD"
-            BuildableName = "NetworkManager.framework"
-            BlueprintName = "NetworkManager"
-            ReferencedContainer = "container:NetworkManager.xcodeproj">
+            BuildableName = "Networking.framework"
+            BlueprintName = "Networking"
+            ReferencedContainer = "container:Networking.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "7F02A52C21AB642B007A6ECD"
-            BuildableName = "NetworkManager.framework"
-            BlueprintName = "NetworkManager"
-            ReferencedContainer = "container:NetworkManager.xcodeproj">
+            BuildableName = "Networking.framework"
+            BlueprintName = "Networking"
+            ReferencedContainer = "container:Networking.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

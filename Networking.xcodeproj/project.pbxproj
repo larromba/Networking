@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F02A53721AB642B007A6ECD /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A52D21AB642B007A6ECD /* NetworkManager.framework */; };
+		7F02A53721AB642B007A6ECD /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A52D21AB642B007A6ECD /* Networking.framework */; };
 		7F02A53C21AB642B007A6ECD /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */; };
 		7F02A53E21AB642B007A6ECD /* NetworkManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F02A53021AB642B007A6ECD /* NetworkManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F02A54821AB6442007A6ECD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54721AB6442007A6ECD /* NetworkManager.swift */; };
@@ -62,10 +62,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		7F02A52D21AB642B007A6ECD /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F02A52D21AB642B007A6ECD /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F02A53021AB642B007A6ECD /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		7F02A53121AB642B007A6ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F02A53621AB642B007A6ECD /* NetworkManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F02A53621AB642B007A6ECD /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7F02A53D21AB642B007A6ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F02A54721AB6442007A6ECD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F02A53721AB642B007A6ECD /* NetworkManager.framework in Frameworks */,
+				7F02A53721AB642B007A6ECD /* Networking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,8 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				7F02A55C21AB671B007A6ECD /* README.md */,
-				7F02A52F21AB642B007A6ECD /* NetworkManager */,
-				7F02A53A21AB642B007A6ECD /* NetworkManagerTests */,
+				7F02A52F21AB642B007A6ECD /* Networking */,
+				7F02A53A21AB642B007A6ECD /* NetworkingTests */,
 				7F02A52E21AB642B007A6ECD /* Products */,
 				7F02A56B21AB6B47007A6ECD /* Frameworks */,
 			);
@@ -127,13 +127,13 @@
 		7F02A52E21AB642B007A6ECD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7F02A52D21AB642B007A6ECD /* NetworkManager.framework */,
-				7F02A53621AB642B007A6ECD /* NetworkManagerTests.xctest */,
+				7F02A52D21AB642B007A6ECD /* Networking.framework */,
+				7F02A53621AB642B007A6ECD /* NetworkingTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7F02A52F21AB642B007A6ECD /* NetworkManager */ = {
+		7F02A52F21AB642B007A6ECD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				7F02A53021AB642B007A6ECD /* NetworkManager.h */,
@@ -145,16 +145,16 @@
 				7F02A55B21AB669F007A6ECD /* Utility */,
 				7F02A53121AB642B007A6ECD /* Info.plist */,
 			);
-			path = NetworkManager;
+			path = Networking;
 			sourceTree = "<group>";
 		};
-		7F02A53A21AB642B007A6ECD /* NetworkManagerTests */ = {
+		7F02A53A21AB642B007A6ECD /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
 				7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */,
 				7F02A53D21AB642B007A6ECD /* Info.plist */,
 			);
-			path = NetworkManagerTests;
+			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
 		7F02A55A21AB668B007A6ECD /* Protocols */ = {
@@ -215,9 +215,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7F02A52C21AB642B007A6ECD /* NetworkManager */ = {
+		7F02A52C21AB642B007A6ECD /* Networking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkManager" */;
+			buildConfigurationList = 7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "Networking" */;
 			buildPhases = (
 				7F02A57A21AB6F68007A6ECD /* ShellScript */,
 				7F02A57B21AB6F69007A6ECD /* ShellScript */,
@@ -231,14 +231,14 @@
 			);
 			dependencies = (
 			);
-			name = NetworkManager;
+			name = Networking;
 			productName = NetworkManager;
-			productReference = 7F02A52D21AB642B007A6ECD /* NetworkManager.framework */;
+			productReference = 7F02A52D21AB642B007A6ECD /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7F02A53521AB642B007A6ECD /* NetworkManagerTests */ = {
+		7F02A53521AB642B007A6ECD /* NetworkingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */;
+			buildConfigurationList = 7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
 			buildPhases = (
 				7F02A53221AB642B007A6ECD /* Sources */,
 				7F02A53321AB642B007A6ECD /* Frameworks */,
@@ -249,9 +249,9 @@
 			dependencies = (
 				7F02A53921AB642B007A6ECD /* PBXTargetDependency */,
 			);
-			name = NetworkManagerTests;
+			name = NetworkingTests;
 			productName = NetworkManagerTests;
-			productReference = 7F02A53621AB642B007A6ECD /* NetworkManagerTests.xctest */;
+			productReference = 7F02A53621AB642B007A6ECD /* NetworkingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -273,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7F02A52721AB642B007A6ECD /* Build configuration list for PBXProject "NetworkManager" */;
+			buildConfigurationList = 7F02A52721AB642B007A6ECD /* Build configuration list for PBXProject "Networking" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -285,8 +285,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F02A52C21AB642B007A6ECD /* NetworkManager */,
-				7F02A53521AB642B007A6ECD /* NetworkManagerTests */,
+				7F02A52C21AB642B007A6ECD /* Networking */,
+				7F02A53521AB642B007A6ECD /* NetworkingTests */,
 			);
 		};
 /* End PBXProject section */
@@ -381,7 +381,7 @@
 /* Begin PBXTargetDependency section */
 		7F02A53921AB642B007A6ECD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7F02A52C21AB642B007A6ECD /* NetworkManager */;
+			target = 7F02A52C21AB642B007A6ECD /* Networking */;
 			targetProxy = 7F02A53821AB642B007A6ECD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -525,14 +525,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = NetworkManager/Info.plist;
+				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetworkManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -557,14 +557,14 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = NetworkManager/Info.plist;
+				INFOPLIST_FILE = Networking/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetworkManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
@@ -582,13 +582,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetworkManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -605,13 +605,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = NetworkManagerTests/Info.plist;
+				INFOPLIST_FILE = NetworkingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.NetworkManagerTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -620,7 +620,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7F02A52721AB642B007A6ECD /* Build configuration list for PBXProject "NetworkManager" */ = {
+		7F02A52721AB642B007A6ECD /* Build configuration list for PBXProject "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F02A53F21AB642B007A6ECD /* Debug */,
@@ -629,7 +629,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkManager" */ = {
+		7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "Networking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F02A54221AB642B007A6ECD /* Debug */,
@@ -638,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */ = {
+		7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F02A54521AB642B007A6ECD /* Debug */,
