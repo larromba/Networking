@@ -1,10 +1,6 @@
 import Foundation
-import Log
+import Logging
 
-public enum NetworkLog {
-    public static var isEnabled = true
-
-    static func log(_ value: String) {
-        Log.log(value)
-    }
+public enum NetworkLog: Log {
+    public static var isEnabled = false
 }

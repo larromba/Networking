@@ -1,6 +1,6 @@
 import AsyncAwait
 import Foundation
-import Log
+import Logging
 
 public final class TestNetworkManager: NetworkManaging {
     private let fetchStubs: [FetchStub]?
@@ -21,7 +21,7 @@ public final class TestNetworkManager: NetworkManaging {
                 let response = try T(data: stub.resource.load())
                 completion(.success(response))
             } catch {
-                log_error(error.localizedDescription)
+                logError(error.localizedDescription)
                 completion(.failure(NetworkError.badResponse(error)))
             }
         }
@@ -37,7 +37,7 @@ public final class TestNetworkManager: NetworkManaging {
                 try stub.data.write(to: stub.writeURL)
                 completion(.success(stub.writeURL))
             } catch {
-                log_error(error.localizedDescription)
+                logError(error.localizedDescription)
                 completion(.failure(NetworkError.badResponse(error)))
             }
         }

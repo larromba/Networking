@@ -15,23 +15,79 @@
 		7F02A54C21AB64AD007A6ECD /* TestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54B21AB64AD007A6ECD /* TestNetworkManager.swift */; };
 		7F02A54E21AB64F7007A6ECD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54D21AB64F7007A6ECD /* Request.swift */; };
 		7F02A55021AB6500007A6ECD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54F21AB6500007A6ECD /* Response.swift */; };
-		7F02A55221AB6557007A6ECD /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55121AB6557007A6ECD /* NetworkLog.swift */; };
 		7F02A55621AB667A007A6ECD /* OperationQueueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55321AB667A007A6ECD /* OperationQueueable.swift */; };
 		7F02A55721AB667A007A6ECD /* URLSessioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55421AB667A007A6ECD /* URLSessioning.swift */; };
 		7F02A55821AB667A007A6ECD /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55521AB667A007A6ECD /* FileManaging.swift */; };
 		7F02A55F21AB695F007A6ECD /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55E21AB695F007A6ECD /* Mockable.swift */; };
 		7F02A56621AB6B3A007A6ECD /* AsyncAwait.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56121AB6B3A007A6ECD /* AsyncAwait.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		7F02A56821AB6B3A007A6ECD /* Log.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56321AB6B3A007A6ECD /* Log.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7F02A56921AB6B3A007A6ECD /* BaseOperation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7F02A56A21AB6B3A007A6ECD /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F02A56521AB6B3A007A6ECD /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		7F02A56C21AB6C98007A6ECD /* AsyncAwait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56121AB6B3A007A6ECD /* AsyncAwait.framework */; };
 		7F02A56D21AB6C98007A6ECD /* BaseOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */; };
-		7F02A56E21AB6C98007A6ECD /* Log.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56321AB6B3A007A6ECD /* Log.framework */; };
 		7F02A56F21AB6C98007A6ECD /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F02A56521AB6B3A007A6ECD /* Result.framework */; };
 		7F02A57221AB6D77007A6ECD /* FileDownloadOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */; };
 		7F02A57421AB6D8B007A6ECD /* HTTPVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */; };
 		7F02A57621AB6DE1007A6ECD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57521AB6DE1007A6ECD /* NetworkError.swift */; };
 		7F02A57D21AB6FED007A6ECD /* mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */; };
+		7F88A65921AF0F200086D6BE /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88A65821AF0F200086D6BE /* NetworkLog.swift */; };
+		7F88A66421AF0F700086D6BE /* Networking_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F88A66221AF0F700086D6BE /* Networking_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F88A67121AF0F7E0086D6BE /* Networking_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F88A66F21AF0F7E0086D6BE /* Networking_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F88A67E21AF0FA00086D6BE /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A66021AF0F700086D6BE /* Networking.framework */; };
+		7F88A68D21AF0FB00086D6BE /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A66D21AF0F7E0086D6BE /* Networking.framework */; };
+		7F88A69321AF0FC40086D6BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54721AB6442007A6ECD /* NetworkManager.swift */; };
+		7F88A69421AF0FC40086D6BE /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54921AB647F007A6ECD /* NetworkOperation.swift */; };
+		7F88A69521AF0FC40086D6BE /* TestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54B21AB64AD007A6ECD /* TestNetworkManager.swift */; };
+		7F88A69621AF0FC40086D6BE /* mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */; };
+		7F88A69721AF0FC40086D6BE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54721AB6442007A6ECD /* NetworkManager.swift */; };
+		7F88A69821AF0FC40086D6BE /* NetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54921AB647F007A6ECD /* NetworkOperation.swift */; };
+		7F88A69921AF0FC40086D6BE /* TestNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54B21AB64AD007A6ECD /* TestNetworkManager.swift */; };
+		7F88A69A21AF0FC40086D6BE /* mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */; };
+		7F88A69B21AF0FC80086D6BE /* FileDownloadOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */; };
+		7F88A69C21AF0FC80086D6BE /* HTTPVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */; };
+		7F88A69D21AF0FC80086D6BE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57521AB6DE1007A6ECD /* NetworkError.swift */; };
+		7F88A69E21AF0FC80086D6BE /* DownloadStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5A21AC10390093507F /* DownloadStub.swift */; };
+		7F88A69F21AF0FC80086D6BE /* FetchStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5C21AC10480093507F /* FetchStub.swift */; };
+		7F88A6A021AF0FC80086D6BE /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5E21AC10580093507F /* FileResource.swift */; };
+		7F88A6A121AF0FC80086D6BE /* FileDownloadOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */; };
+		7F88A6A221AF0FC80086D6BE /* HTTPVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */; };
+		7F88A6A321AF0FC80086D6BE /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57521AB6DE1007A6ECD /* NetworkError.swift */; };
+		7F88A6A421AF0FC80086D6BE /* DownloadStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5A21AC10390093507F /* DownloadStub.swift */; };
+		7F88A6A521AF0FC80086D6BE /* FetchStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5C21AC10480093507F /* FetchStub.swift */; };
+		7F88A6A621AF0FC80086D6BE /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5E21AC10580093507F /* FileResource.swift */; };
+		7F88A6A721AF0FCB0086D6BE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54D21AB64F7007A6ECD /* Request.swift */; };
+		7F88A6A821AF0FCB0086D6BE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54F21AB6500007A6ECD /* Response.swift */; };
+		7F88A6A921AF0FCB0086D6BE /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55521AB667A007A6ECD /* FileManaging.swift */; };
+		7F88A6AA21AF0FCB0086D6BE /* OperationQueueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55321AB667A007A6ECD /* OperationQueueable.swift */; };
+		7F88A6AB21AF0FCB0086D6BE /* URLSessioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55421AB667A007A6ECD /* URLSessioning.swift */; };
+		7F88A6AC21AF0FCB0086D6BE /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55E21AB695F007A6ECD /* Mockable.swift */; };
+		7F88A6AD21AF0FCB0086D6BE /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54D21AB64F7007A6ECD /* Request.swift */; };
+		7F88A6AE21AF0FCB0086D6BE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A54F21AB6500007A6ECD /* Response.swift */; };
+		7F88A6AF21AF0FCB0086D6BE /* FileManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55521AB667A007A6ECD /* FileManaging.swift */; };
+		7F88A6B021AF0FCB0086D6BE /* OperationQueueable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55321AB667A007A6ECD /* OperationQueueable.swift */; };
+		7F88A6B121AF0FCB0086D6BE /* URLSessioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55421AB667A007A6ECD /* URLSessioning.swift */; };
+		7F88A6B221AF0FCB0086D6BE /* Mockable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A55E21AB695F007A6ECD /* Mockable.swift */; };
+		7F88A6B321AF0FCD0086D6BE /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88A65821AF0F200086D6BE /* NetworkLog.swift */; };
+		7F88A6B421AF0FCE0086D6BE /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88A65821AF0F200086D6BE /* NetworkLog.swift */; };
+		7F88A6B921AF10610086D6BE /* BaseOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6B521AF10610086D6BE /* BaseOperation.framework */; };
+		7F88A6BA21AF10610086D6BE /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6B621AF10610086D6BE /* Logging.framework */; };
+		7F88A6BB21AF10610086D6BE /* AsyncAwait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6B721AF10610086D6BE /* AsyncAwait.framework */; };
+		7F88A6BC21AF10610086D6BE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6B821AF10610086D6BE /* Result.framework */; };
+		7F88A6BE21AF10790086D6BE /* AsyncAwait.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B721AF10610086D6BE /* AsyncAwait.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6BF21AF107C0086D6BE /* BaseOperation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B521AF10610086D6BE /* BaseOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6C021AF108E0086D6BE /* Logging.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B621AF10610086D6BE /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6C121AF10920086D6BE /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B821AF10610086D6BE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6C221AF11120086D6BE /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */; };
+		7F88A6C321AF11120086D6BE /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */; };
+		7F88A6C621AF114F0086D6BE /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6C521AF114F0086D6BE /* Logging.framework */; };
+		7F88A6C721AF11550086D6BE /* Logging.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6C521AF114F0086D6BE /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		7F88A6CC21AF11C30086D6BE /* BaseOperation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6C821AF11C30086D6BE /* BaseOperation.framework */; };
+		7F88A6CD21AF11C30086D6BE /* Logging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6C921AF11C30086D6BE /* Logging.framework */; };
+		7F88A6CE21AF11C30086D6BE /* AsyncAwait.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6CA21AF11C30086D6BE /* AsyncAwait.framework */; };
+		7F88A6CF21AF11C30086D6BE /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F88A6CB21AF11C30086D6BE /* Result.framework */; };
+		7F88A6D121AF11D50086D6BE /* Logging.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6C921AF11C30086D6BE /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6D221AF11DB0086D6BE /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6CB21AF11C30086D6BE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6D321AF11E10086D6BE /* AsyncAwait.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6CA21AF11C30086D6BE /* AsyncAwait.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7F88A6D421AF11E80086D6BE /* BaseOperation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6C821AF11C30086D6BE /* BaseOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7FEE9D5B21AC10390093507F /* DownloadStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5A21AC10390093507F /* DownloadStub.swift */; };
 		7FEE9D5D21AC10480093507F /* FetchStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5C21AC10480093507F /* FetchStub.swift */; };
 		7FEE9D5F21AC10580093507F /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5E21AC10580093507F /* FileResource.swift */; };
@@ -45,6 +101,20 @@
 			remoteGlobalIDString = 7F02A52C21AB642B007A6ECD;
 			remoteInfo = NetworkManager;
 		};
+		7F88A67F21AF0FA00086D6BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F02A52421AB642B007A6ECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F88A65F21AF0F700086D6BE;
+			remoteInfo = "Networking-iOS";
+		};
+		7F88A68E21AF0FB00086D6BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7F02A52421AB642B007A6ECD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F88A66C21AF0F7E0086D6BE;
+			remoteInfo = "Networking-tvOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,10 +124,36 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				7F88A6C721AF11550086D6BE /* Logging.framework in CopyFiles */,
 				7F02A56621AB6B3A007A6ECD /* AsyncAwait.framework in CopyFiles */,
-				7F02A56821AB6B3A007A6ECD /* Log.framework in CopyFiles */,
 				7F02A56921AB6B3A007A6ECD /* BaseOperation.framework in CopyFiles */,
 				7F02A56A21AB6B3A007A6ECD /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A6BD21AF10690086D6BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7F88A6C121AF10920086D6BE /* Result.framework in CopyFiles */,
+				7F88A6BE21AF10790086D6BE /* AsyncAwait.framework in CopyFiles */,
+				7F88A6BF21AF107C0086D6BE /* BaseOperation.framework in CopyFiles */,
+				7F88A6C021AF108E0086D6BE /* Logging.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A6D021AF11CB0086D6BE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7F88A6D121AF11D50086D6BE /* Logging.framework in CopyFiles */,
+				7F88A6D221AF11DB0086D6BE /* Result.framework in CopyFiles */,
+				7F88A6D321AF11E10086D6BE /* AsyncAwait.framework in CopyFiles */,
+				7F88A6D421AF11E80086D6BE /* BaseOperation.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,28 +163,46 @@
 		7F02A52D21AB642B007A6ECD /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F02A53021AB642B007A6ECD /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		7F02A53121AB642B007A6ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7F02A53621AB642B007A6ECD /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F02A53621AB642B007A6ECD /* NetworkingTests-macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkingTests-macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7F02A53D21AB642B007A6ECD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F02A54721AB6442007A6ECD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		7F02A54921AB647F007A6ECD /* NetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkOperation.swift; sourceTree = "<group>"; };
 		7F02A54B21AB64AD007A6ECD /* TestNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkManager.swift; sourceTree = "<group>"; };
-		7F02A54D21AB64F7007A6ECD /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		7F02A54F21AB6500007A6ECD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		7F02A55121AB6557007A6ECD /* NetworkLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
-		7F02A55321AB667A007A6ECD /* OperationQueueable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationQueueable.swift; sourceTree = "<group>"; };
-		7F02A55421AB667A007A6ECD /* URLSessioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessioning.swift; sourceTree = "<group>"; };
-		7F02A55521AB667A007A6ECD /* FileManaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileManaging.swift; sourceTree = "<group>"; };
+		7F02A54D21AB64F7007A6ECD /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Networking/Request.swift; sourceTree = SOURCE_ROOT; };
+		7F02A54F21AB6500007A6ECD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Networking/Response.swift; sourceTree = SOURCE_ROOT; };
+		7F02A55321AB667A007A6ECD /* OperationQueueable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OperationQueueable.swift; path = Networking/OperationQueueable.swift; sourceTree = SOURCE_ROOT; };
+		7F02A55421AB667A007A6ECD /* URLSessioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = URLSessioning.swift; path = Networking/URLSessioning.swift; sourceTree = SOURCE_ROOT; };
+		7F02A55521AB667A007A6ECD /* FileManaging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FileManaging.swift; path = Networking/FileManaging.swift; sourceTree = SOURCE_ROOT; };
 		7F02A55C21AB671B007A6ECD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		7F02A55E21AB695F007A6ECD /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
+		7F02A55E21AB695F007A6ECD /* Mockable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mockable.swift; path = Networking/Mockable.swift; sourceTree = SOURCE_ROOT; };
 		7F02A56121AB6B3A007A6ECD /* AsyncAwait.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncAwait.framework; path = Carthage/Build/Mac/AsyncAwait.framework; sourceTree = "<group>"; };
-		7F02A56321AB6B3A007A6ECD /* Log.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Log.framework; path = Carthage/Build/Mac/Log.framework; sourceTree = "<group>"; };
 		7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaseOperation.framework; path = Carthage/Build/Mac/BaseOperation.framework; sourceTree = "<group>"; };
 		7F02A56521AB6B3A007A6ECD /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
 		7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDownloadOption.swift; sourceTree = "<group>"; };
 		7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPVerb.swift; sourceTree = "<group>"; };
 		7F02A57521AB6DE1007A6ECD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mocks.generated.swift; sourceTree = "<group>"; };
+		7F88A65821AF0F200086D6BE /* NetworkLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
+		7F88A66021AF0F700086D6BE /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F88A66221AF0F700086D6BE /* Networking_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking_iOS.h; sourceTree = "<group>"; };
+		7F88A66321AF0F700086D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F88A66D21AF0F7E0086D6BE /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F88A66F21AF0F7E0086D6BE /* Networking_tvOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking_tvOS.h; sourceTree = "<group>"; };
+		7F88A67021AF0F7E0086D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F88A67921AF0FA00086D6BE /* NetworkingTests-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkingTests-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F88A67D21AF0FA00086D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F88A68821AF0FB00086D6BE /* NetworkingTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NetworkingTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F88A68C21AF0FB00086D6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F88A6B521AF10610086D6BE /* BaseOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaseOperation.framework; path = Carthage/Build/iOS/BaseOperation.framework; sourceTree = "<group>"; };
+		7F88A6B621AF10610086D6BE /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logging.framework; path = Carthage/Build/iOS/Logging.framework; sourceTree = "<group>"; };
+		7F88A6B721AF10610086D6BE /* AsyncAwait.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncAwait.framework; path = Carthage/Build/iOS/AsyncAwait.framework; sourceTree = "<group>"; };
+		7F88A6B821AF10610086D6BE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		7F88A6C521AF114F0086D6BE /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logging.framework; path = Carthage/Build/Mac/Logging.framework; sourceTree = "<group>"; };
+		7F88A6C821AF11C30086D6BE /* BaseOperation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BaseOperation.framework; path = Carthage/Build/tvOS/BaseOperation.framework; sourceTree = "<group>"; };
+		7F88A6C921AF11C30086D6BE /* Logging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Logging.framework; path = Carthage/Build/tvOS/Logging.framework; sourceTree = "<group>"; };
+		7F88A6CA21AF11C30086D6BE /* AsyncAwait.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsyncAwait.framework; path = Carthage/Build/tvOS/AsyncAwait.framework; sourceTree = "<group>"; };
+		7F88A6CB21AF11C30086D6BE /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
 		7FEE9D5A21AC10390093507F /* DownloadStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadStub.swift; sourceTree = "<group>"; };
 		7FEE9D5C21AC10480093507F /* FetchStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchStub.swift; sourceTree = "<group>"; };
 		7FEE9D5E21AC10580093507F /* FileResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileResource.swift; sourceTree = "<group>"; };
@@ -101,8 +215,8 @@
 			files = (
 				7F02A56C21AB6C98007A6ECD /* AsyncAwait.framework in Frameworks */,
 				7F02A56D21AB6C98007A6ECD /* BaseOperation.framework in Frameworks */,
-				7F02A56E21AB6C98007A6ECD /* Log.framework in Frameworks */,
 				7F02A56F21AB6C98007A6ECD /* Result.framework in Frameworks */,
+				7F88A6C621AF114F0086D6BE /* Logging.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +228,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F88A65D21AF0F700086D6BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A6B921AF10610086D6BE /* BaseOperation.framework in Frameworks */,
+				7F88A6BA21AF10610086D6BE /* Logging.framework in Frameworks */,
+				7F88A6BB21AF10610086D6BE /* AsyncAwait.framework in Frameworks */,
+				7F88A6BC21AF10610086D6BE /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A66A21AF0F7E0086D6BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A6CC21AF11C30086D6BE /* BaseOperation.framework in Frameworks */,
+				7F88A6CD21AF11C30086D6BE /* Logging.framework in Frameworks */,
+				7F88A6CE21AF11C30086D6BE /* AsyncAwait.framework in Frameworks */,
+				7F88A6CF21AF11C30086D6BE /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A67621AF0FA00086D6BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A67E21AF0FA00086D6BE /* Networking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A68521AF0FB00086D6BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A68D21AF0FB00086D6BE /* Networking.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,8 +273,14 @@
 			isa = PBXGroup;
 			children = (
 				7F02A55C21AB671B007A6ECD /* README.md */,
-				7F02A52F21AB642B007A6ECD /* Networking */,
-				7F02A53A21AB642B007A6ECD /* NetworkingTests */,
+				7F88A65521AF0E660086D6BE /* Networking */,
+				7F02A52F21AB642B007A6ECD /* Networking-macOS */,
+				7F88A66121AF0F700086D6BE /* Networking-iOS */,
+				7F88A66E21AF0F7E0086D6BE /* Networking-tvOS */,
+				7F88A6C421AF11180086D6BE /* NetworkManagerTests */,
+				7F02A53A21AB642B007A6ECD /* NetworkingTests-macOS */,
+				7F88A67A21AF0FA00086D6BE /* NetworkingTests-iOS */,
+				7F88A68921AF0FB00086D6BE /* NetworkingTests-tvOS */,
 				7F02A52E21AB642B007A6ECD /* Products */,
 				7F02A56B21AB6B47007A6ECD /* Frameworks */,
 			);
@@ -132,37 +290,79 @@
 			isa = PBXGroup;
 			children = (
 				7F02A52D21AB642B007A6ECD /* Networking.framework */,
-				7F02A53621AB642B007A6ECD /* NetworkingTests.xctest */,
+				7F02A53621AB642B007A6ECD /* NetworkingTests-macOS.xctest */,
+				7F88A66021AF0F700086D6BE /* Networking.framework */,
+				7F88A66D21AF0F7E0086D6BE /* Networking.framework */,
+				7F88A67921AF0FA00086D6BE /* NetworkingTests-iOS.xctest */,
+				7F88A68821AF0FB00086D6BE /* NetworkingTests-tvOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7F02A52F21AB642B007A6ECD /* Networking */ = {
+		7F02A52F21AB642B007A6ECD /* Networking-macOS */ = {
 			isa = PBXGroup;
 			children = (
 				7F02A53021AB642B007A6ECD /* NetworkManager.h */,
+				7F02A53121AB642B007A6ECD /* Info.plist */,
+			);
+			path = "Networking-macOS";
+			sourceTree = "<group>";
+		};
+		7F02A53A21AB642B007A6ECD /* NetworkingTests-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F02A53D21AB642B007A6ECD /* Info.plist */,
+			);
+			path = "NetworkingTests-macOS";
+			sourceTree = "<group>";
+		};
+		7F02A56B21AB6B47007A6ECD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F88A6CA21AF11C30086D6BE /* AsyncAwait.framework */,
+				7F88A6C821AF11C30086D6BE /* BaseOperation.framework */,
+				7F88A6C921AF11C30086D6BE /* Logging.framework */,
+				7F88A6CB21AF11C30086D6BE /* Result.framework */,
+				7F88A6C521AF114F0086D6BE /* Logging.framework */,
+				7F02A56121AB6B3A007A6ECD /* AsyncAwait.framework */,
+				7F88A6B721AF10610086D6BE /* AsyncAwait.framework */,
+				7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */,
+				7F88A6B521AF10610086D6BE /* BaseOperation.framework */,
+				7F88A6B621AF10610086D6BE /* Logging.framework */,
+				7F88A6B821AF10610086D6BE /* Result.framework */,
+				7F02A56521AB6B3A007A6ECD /* Result.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F88A65521AF0E660086D6BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
 				7F02A54721AB6442007A6ECD /* NetworkManager.swift */,
 				7F02A54921AB647F007A6ECD /* NetworkOperation.swift */,
 				7F02A54B21AB64AD007A6ECD /* TestNetworkManager.swift */,
 				7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */,
-				7F02A57721AB6DE9007A6ECD /* Model */,
-				7F02A55A21AB668B007A6ECD /* Protocols */,
-				7F02A55B21AB669F007A6ECD /* Utility */,
-				7F02A53121AB642B007A6ECD /* Info.plist */,
+				7F88A65621AF0EB90086D6BE /* Model */,
+				7F88A65721AF0F000086D6BE /* Protocols */,
+				7F88A65A21AF0F290086D6BE /* Utility */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		7F02A53A21AB642B007A6ECD /* NetworkingTests */ = {
+		7F88A65621AF0EB90086D6BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */,
-				7F02A53D21AB642B007A6ECD /* Info.plist */,
+				7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */,
+				7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */,
+				7F02A57521AB6DE1007A6ECD /* NetworkError.swift */,
+				7FEE9D5A21AC10390093507F /* DownloadStub.swift */,
+				7FEE9D5C21AC10480093507F /* FetchStub.swift */,
+				7FEE9D5E21AC10580093507F /* FileResource.swift */,
 			);
-			path = NetworkingTests;
+			name = Model;
 			sourceTree = "<group>";
 		};
-		7F02A55A21AB668B007A6ECD /* Protocols */ = {
+		7F88A65721AF0F000086D6BE /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				7F02A54D21AB64F7007A6ECD /* Request.swift */,
@@ -175,36 +375,54 @@
 			name = Protocols;
 			sourceTree = "<group>";
 		};
-		7F02A55B21AB669F007A6ECD /* Utility */ = {
+		7F88A65A21AF0F290086D6BE /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				7F02A55121AB6557007A6ECD /* NetworkLog.swift */,
+				7F88A65821AF0F200086D6BE /* NetworkLog.swift */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
 		};
-		7F02A56B21AB6B47007A6ECD /* Frameworks */ = {
+		7F88A66121AF0F700086D6BE /* Networking-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				7F02A56121AB6B3A007A6ECD /* AsyncAwait.framework */,
-				7F02A56421AB6B3A007A6ECD /* BaseOperation.framework */,
-				7F02A56321AB6B3A007A6ECD /* Log.framework */,
-				7F02A56521AB6B3A007A6ECD /* Result.framework */,
+				7F88A66221AF0F700086D6BE /* Networking_iOS.h */,
+				7F88A66321AF0F700086D6BE /* Info.plist */,
 			);
-			name = Frameworks;
+			path = "Networking-iOS";
 			sourceTree = "<group>";
 		};
-		7F02A57721AB6DE9007A6ECD /* Model */ = {
+		7F88A66E21AF0F7E0086D6BE /* Networking-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				7F02A57121AB6D77007A6ECD /* FileDownloadOption.swift */,
-				7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */,
-				7F02A57521AB6DE1007A6ECD /* NetworkError.swift */,
-				7FEE9D5A21AC10390093507F /* DownloadStub.swift */,
-				7FEE9D5C21AC10480093507F /* FetchStub.swift */,
-				7FEE9D5E21AC10580093507F /* FileResource.swift */,
+				7F88A66F21AF0F7E0086D6BE /* Networking_tvOS.h */,
+				7F88A67021AF0F7E0086D6BE /* Info.plist */,
 			);
-			name = Model;
+			path = "Networking-tvOS";
+			sourceTree = "<group>";
+		};
+		7F88A67A21AF0FA00086D6BE /* NetworkingTests-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F88A67D21AF0FA00086D6BE /* Info.plist */,
+			);
+			path = "NetworkingTests-iOS";
+			sourceTree = "<group>";
+		};
+		7F88A68921AF0FB00086D6BE /* NetworkingTests-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				7F88A68C21AF0FB00086D6BE /* Info.plist */,
+			);
+			path = "NetworkingTests-tvOS";
+			sourceTree = "<group>";
+		};
+		7F88A6C421AF11180086D6BE /* NetworkManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				7F02A53B21AB642B007A6ECD /* NetworkManagerTests.swift */,
+			);
+			path = NetworkManagerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,12 +436,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F88A65B21AF0F700086D6BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A66421AF0F700086D6BE /* Networking_iOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A66821AF0F7E0086D6BE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A67121AF0F7E0086D6BE /* Networking_tvOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7F02A52C21AB642B007A6ECD /* Networking */ = {
+		7F02A52C21AB642B007A6ECD /* Networking-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildConfigurationList = 7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "Networking-macOS" */;
 			buildPhases = (
 				7F02A57A21AB6F68007A6ECD /* ShellScript */,
 				7F02A57B21AB6F69007A6ECD /* ShellScript */,
@@ -237,14 +471,14 @@
 			);
 			dependencies = (
 			);
-			name = Networking;
+			name = "Networking-macOS";
 			productName = NetworkManager;
 			productReference = 7F02A52D21AB642B007A6ECD /* Networking.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7F02A53521AB642B007A6ECD /* NetworkingTests */ = {
+		7F02A53521AB642B007A6ECD /* NetworkingTests-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkingTests" */;
+			buildConfigurationList = 7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkingTests-macOS" */;
 			buildPhases = (
 				7F02A53221AB642B007A6ECD /* Sources */,
 				7F02A53321AB642B007A6ECD /* Frameworks */,
@@ -255,9 +489,83 @@
 			dependencies = (
 				7F02A53921AB642B007A6ECD /* PBXTargetDependency */,
 			);
-			name = NetworkingTests;
+			name = "NetworkingTests-macOS";
 			productName = NetworkManagerTests;
-			productReference = 7F02A53621AB642B007A6ECD /* NetworkingTests.xctest */;
+			productReference = 7F02A53621AB642B007A6ECD /* NetworkingTests-macOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F88A65F21AF0F700086D6BE /* Networking-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F88A66521AF0F700086D6BE /* Build configuration list for PBXNativeTarget "Networking-iOS" */;
+			buildPhases = (
+				7F88A65B21AF0F700086D6BE /* Headers */,
+				7F88A65C21AF0F700086D6BE /* Sources */,
+				7F88A65D21AF0F700086D6BE /* Frameworks */,
+				7F88A65E21AF0F700086D6BE /* Resources */,
+				7F88A6BD21AF10690086D6BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Networking-iOS";
+			productName = "Networking-iOS";
+			productReference = 7F88A66021AF0F700086D6BE /* Networking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F88A66C21AF0F7E0086D6BE /* Networking-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F88A67221AF0F7E0086D6BE /* Build configuration list for PBXNativeTarget "Networking-tvOS" */;
+			buildPhases = (
+				7F88A66821AF0F7E0086D6BE /* Headers */,
+				7F88A66921AF0F7E0086D6BE /* Sources */,
+				7F88A66A21AF0F7E0086D6BE /* Frameworks */,
+				7F88A66B21AF0F7E0086D6BE /* Resources */,
+				7F88A6D021AF11CB0086D6BE /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Networking-tvOS";
+			productName = "Networking-tvOS";
+			productReference = 7F88A66D21AF0F7E0086D6BE /* Networking.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7F88A67821AF0FA00086D6BE /* NetworkingTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F88A68121AF0FA00086D6BE /* Build configuration list for PBXNativeTarget "NetworkingTests-iOS" */;
+			buildPhases = (
+				7F88A67521AF0FA00086D6BE /* Sources */,
+				7F88A67621AF0FA00086D6BE /* Frameworks */,
+				7F88A67721AF0FA00086D6BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F88A68021AF0FA00086D6BE /* PBXTargetDependency */,
+			);
+			name = "NetworkingTests-iOS";
+			productName = "NetworkingTests-iOS";
+			productReference = 7F88A67921AF0FA00086D6BE /* NetworkingTests-iOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7F88A68721AF0FB00086D6BE /* NetworkingTests-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F88A69021AF0FB00086D6BE /* Build configuration list for PBXNativeTarget "NetworkingTests-tvOS" */;
+			buildPhases = (
+				7F88A68421AF0FB00086D6BE /* Sources */,
+				7F88A68521AF0FB00086D6BE /* Frameworks */,
+				7F88A68621AF0FB00086D6BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F88A68F21AF0FB00086D6BE /* PBXTargetDependency */,
+			);
+			name = "NetworkingTests-tvOS";
+			productName = "NetworkingTests-tvOS";
+			productReference = 7F88A68821AF0FB00086D6BE /* NetworkingTests-tvOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -277,6 +585,18 @@
 					7F02A53521AB642B007A6ECD = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					7F88A65F21AF0F700086D6BE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7F88A66C21AF0F7E0086D6BE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7F88A67821AF0FA00086D6BE = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					7F88A68721AF0FB00086D6BE = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 7F02A52721AB642B007A6ECD /* Build configuration list for PBXProject "Networking" */;
@@ -291,8 +611,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F02A52C21AB642B007A6ECD /* Networking */,
-				7F02A53521AB642B007A6ECD /* NetworkingTests */,
+				7F02A52C21AB642B007A6ECD /* Networking-macOS */,
+				7F88A65F21AF0F700086D6BE /* Networking-iOS */,
+				7F88A66C21AF0F7E0086D6BE /* Networking-tvOS */,
+				7F02A53521AB642B007A6ECD /* NetworkingTests-macOS */,
+				7F88A67821AF0FA00086D6BE /* NetworkingTests-iOS */,
+				7F88A68721AF0FB00086D6BE /* NetworkingTests-tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -306,6 +630,34 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7F02A53421AB642B007A6ECD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A65E21AF0F700086D6BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A66B21AF0F7E0086D6BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A67721AF0FA00086D6BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A68621AF0FB00086D6BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,7 +716,7 @@
 				7F02A54E21AB64F7007A6ECD /* Request.swift in Sources */,
 				7F02A55721AB667A007A6ECD /* URLSessioning.swift in Sources */,
 				7F02A54C21AB64AD007A6ECD /* TestNetworkManager.swift in Sources */,
-				7F02A55221AB6557007A6ECD /* NetworkLog.swift in Sources */,
+				7F88A65921AF0F200086D6BE /* NetworkLog.swift in Sources */,
 				7F02A55F21AB695F007A6ECD /* Mockable.swift in Sources */,
 				7F02A57421AB6D8B007A6ECD /* HTTPVerb.swift in Sources */,
 				7F02A57221AB6D77007A6ECD /* FileDownloadOption.swift in Sources */,
@@ -384,13 +736,87 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7F88A65C21AF0F700086D6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A69B21AF0FC80086D6BE /* FileDownloadOption.swift in Sources */,
+				7F88A6AA21AF0FCB0086D6BE /* OperationQueueable.swift in Sources */,
+				7F88A69D21AF0FC80086D6BE /* NetworkError.swift in Sources */,
+				7F88A69421AF0FC40086D6BE /* NetworkOperation.swift in Sources */,
+				7F88A6A021AF0FC80086D6BE /* FileResource.swift in Sources */,
+				7F88A6A821AF0FCB0086D6BE /* Response.swift in Sources */,
+				7F88A6A721AF0FCB0086D6BE /* Request.swift in Sources */,
+				7F88A6AC21AF0FCB0086D6BE /* Mockable.swift in Sources */,
+				7F88A69E21AF0FC80086D6BE /* DownloadStub.swift in Sources */,
+				7F88A69C21AF0FC80086D6BE /* HTTPVerb.swift in Sources */,
+				7F88A6A921AF0FCB0086D6BE /* FileManaging.swift in Sources */,
+				7F88A69521AF0FC40086D6BE /* TestNetworkManager.swift in Sources */,
+				7F88A6AB21AF0FCB0086D6BE /* URLSessioning.swift in Sources */,
+				7F88A69621AF0FC40086D6BE /* mocks.generated.swift in Sources */,
+				7F88A69321AF0FC40086D6BE /* NetworkManager.swift in Sources */,
+				7F88A69F21AF0FC80086D6BE /* FetchStub.swift in Sources */,
+				7F88A6B321AF0FCD0086D6BE /* NetworkLog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A66921AF0F7E0086D6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A6A121AF0FC80086D6BE /* FileDownloadOption.swift in Sources */,
+				7F88A6B021AF0FCB0086D6BE /* OperationQueueable.swift in Sources */,
+				7F88A6A321AF0FC80086D6BE /* NetworkError.swift in Sources */,
+				7F88A69821AF0FC40086D6BE /* NetworkOperation.swift in Sources */,
+				7F88A6A621AF0FC80086D6BE /* FileResource.swift in Sources */,
+				7F88A6AE21AF0FCB0086D6BE /* Response.swift in Sources */,
+				7F88A6AD21AF0FCB0086D6BE /* Request.swift in Sources */,
+				7F88A6B221AF0FCB0086D6BE /* Mockable.swift in Sources */,
+				7F88A6A421AF0FC80086D6BE /* DownloadStub.swift in Sources */,
+				7F88A6A221AF0FC80086D6BE /* HTTPVerb.swift in Sources */,
+				7F88A6AF21AF0FCB0086D6BE /* FileManaging.swift in Sources */,
+				7F88A69921AF0FC40086D6BE /* TestNetworkManager.swift in Sources */,
+				7F88A6B121AF0FCB0086D6BE /* URLSessioning.swift in Sources */,
+				7F88A69A21AF0FC40086D6BE /* mocks.generated.swift in Sources */,
+				7F88A69721AF0FC40086D6BE /* NetworkManager.swift in Sources */,
+				7F88A6A521AF0FC80086D6BE /* FetchStub.swift in Sources */,
+				7F88A6B421AF0FCE0086D6BE /* NetworkLog.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A67521AF0FA00086D6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A6C221AF11120086D6BE /* NetworkManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F88A68421AF0FB00086D6BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F88A6C321AF11120086D6BE /* NetworkManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		7F02A53921AB642B007A6ECD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7F02A52C21AB642B007A6ECD /* Networking */;
+			target = 7F02A52C21AB642B007A6ECD /* Networking-macOS */;
 			targetProxy = 7F02A53821AB642B007A6ECD /* PBXContainerItemProxy */;
+		};
+		7F88A68021AF0FA00086D6BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F88A65F21AF0F700086D6BE /* Networking-iOS */;
+			targetProxy = 7F88A67F21AF0FA00086D6BE /* PBXContainerItemProxy */;
+		};
+		7F88A68F21AF0FB00086D6BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7F88A66C21AF0F7E0086D6BE /* Networking-tvOS */;
+			targetProxy = 7F88A68E21AF0FB00086D6BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -533,15 +959,15 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.Networking-macOS";
+				PRODUCT_NAME = Networking;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -565,15 +991,15 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Networking/Info.plist;
+				INFOPLIST_FILE = "Networking-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.Networking-macOS";
+				PRODUCT_NAME = Networking;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.2;
 			};
@@ -590,13 +1016,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				INFOPLIST_FILE = "NetworkingTests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.NetworkingTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -613,15 +1039,231 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = NetworkingTests/Info.plist;
+				INFOPLIST_FILE = "NetworkingTests-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.larromba.Networking;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.NetworkingTests-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		7F88A66621AF0F700086D6BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Networking-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.Networking-iOS";
+				PRODUCT_NAME = Networking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F88A66721AF0F700086D6BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "Networking-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.Networking-iOS";
+				PRODUCT_NAME = Networking;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F88A67321AF0F7E0086D6BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = "Networking-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.Networking-tvOS";
+				PRODUCT_NAME = Networking;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+			};
+			name = Debug;
+		};
+		7F88A67421AF0F7E0086D6BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
+				INFOPLIST_FILE = "Networking-tvOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.Networking-tvOS";
+				PRODUCT_NAME = Networking;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 12.1;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F88A68221AF0FA00086D6BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "NetworkingTests-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.NetworkingTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F88A68321AF0FA00086D6BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "NetworkingTests-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.NetworkingTests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F88A69121AF0FB00086D6BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "NetworkingTests-tvOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.NetworkingTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+			};
+			name = Debug;
+		};
+		7F88A69221AF0FB00086D6BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PFC77GK3D7;
+				INFOPLIST_FILE = "NetworkingTests-tvOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.larromba.NetworkingTests-tvOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -637,7 +1279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "Networking" */ = {
+		7F02A54121AB642B007A6ECD /* Build configuration list for PBXNativeTarget "Networking-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F02A54221AB642B007A6ECD /* Debug */,
@@ -646,11 +1288,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkingTests" */ = {
+		7F02A54421AB642B007A6ECD /* Build configuration list for PBXNativeTarget "NetworkingTests-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7F02A54521AB642B007A6ECD /* Debug */,
 				7F02A54621AB642B007A6ECD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F88A66521AF0F700086D6BE /* Build configuration list for PBXNativeTarget "Networking-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F88A66621AF0F700086D6BE /* Debug */,
+				7F88A66721AF0F700086D6BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F88A67221AF0F7E0086D6BE /* Build configuration list for PBXNativeTarget "Networking-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F88A67321AF0F7E0086D6BE /* Debug */,
+				7F88A67421AF0F7E0086D6BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F88A68121AF0FA00086D6BE /* Build configuration list for PBXNativeTarget "NetworkingTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F88A68221AF0FA00086D6BE /* Debug */,
+				7F88A68321AF0FA00086D6BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F88A69021AF0FB00086D6BE /* Build configuration list for PBXNativeTarget "NetworkingTests-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F88A69121AF0FB00086D6BE /* Debug */,
+				7F88A69221AF0FB00086D6BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

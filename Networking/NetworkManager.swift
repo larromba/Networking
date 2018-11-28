@@ -1,6 +1,6 @@
 import AsyncAwait
 import Foundation
-import Log
+import Logging
 import Result
 
 // sourcery: name = NetworkManager
@@ -22,7 +22,7 @@ public final class NetworkManager: NetworkManaging {
     }
 
     public func fetch<T: Response>(request: Request) -> Async<T> {
-        NetworkLog.log("fetching: \(request.httpVerb) \(request.url)")
+        NetworkLog.info("fetching: \(request.httpVerb) \(request.url)")
 
         return Async { completion in
             let operation = NetworkOperation()
@@ -50,7 +50,7 @@ public final class NetworkManager: NetworkManaging {
                         return
                     }
                     do {
-                        NetworkLog.log("fetched: \(request.httpVerb) ...\(request.url.lastPathComponent)")
+                        NetworkLog.info("fetched: \(request.httpVerb) ...\(request.url.lastPathComponent)")
                         let response = try T(data: data)
                         completion(.success(response))
                     } catch {
@@ -62,7 +62,7 @@ public final class NetworkManager: NetworkManaging {
     }
 
     public func download(_ url: URL, option: FileDownloadOption) -> Async<URL> {
-        NetworkLog.log("downloading: \(url)")
+        NetworkLog.info("downloading: \(url)")
 
         return Async { completion in
             let operation = NetworkOperation()
@@ -91,10 +91,10 @@ public final class NetworkManager: NetworkManaging {
 
                 // must rename / move file else it's removed
                 // see https://developer.apple.com/documentation/foundation/urlsession/1411511-downloadtask
-                NetworkLog.log("downloaded: ...\(url.lastPathComponent) temporarilly to: \(tempURL)")
+                NetworkLog.info("downloaded: ...\(url.lastPathComponent) temporarilly to: \(tempURL)")
                 switch self.moveFile(at: tempURL, withOption: option) {
                 case .success(let fileURL):
-                    NetworkLog.log("moved: ...\(url.lastPathComponent) finally to: \(fileURL)")
+                    NetworkLog.info("moved: ...\(url.lastPathComponent) finally to: \(fileURL)")
                     completion(.success(fileURL))
                 case .failure(let error):
                     completion(.failure(error))
