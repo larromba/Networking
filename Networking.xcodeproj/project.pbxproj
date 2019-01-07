@@ -118,6 +118,14 @@
 		7FA1699F21E3843E00D8BA3F /* DownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1699E21E3843E00D8BA3F /* DownloadTests.swift */; };
 		7FA169A021E3843E00D8BA3F /* DownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1699E21E3843E00D8BA3F /* DownloadTests.swift */; };
 		7FA169A121E3843E00D8BA3F /* DownloadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA1699E21E3843E00D8BA3F /* DownloadTests.swift */; };
+		7FA169A321E3947D00D8BA3F /* AsyncAwait.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B721AF10610086D6BE /* AsyncAwait.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169A521E3949200D8BA3F /* BaseOperation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B521AF10610086D6BE /* BaseOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169A621E3949500D8BA3F /* Logging.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B621AF10610086D6BE /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169A821E3949F00D8BA3F /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6B821AF10610086D6BE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169AA21E394B900D8BA3F /* BaseOperation.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6C821AF11C30086D6BE /* BaseOperation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169AB21E394BD00D8BA3F /* Logging.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6C921AF11C30086D6BE /* Logging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169AC21E394C000D8BA3F /* AsyncAwait.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6CA21AF11C30086D6BE /* AsyncAwait.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7FA169AE21E394C900D8BA3F /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7F88A6CB21AF11C30086D6BE /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7FEE9D5B21AC10390093507F /* DownloadStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5A21AC10390093507F /* DownloadStub.swift */; };
 		7FEE9D5D21AC10480093507F /* FetchStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5C21AC10480093507F /* FetchStub.swift */; };
 		7FEE9D5F21AC10580093507F /* FileResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE9D5E21AC10580093507F /* FileResource.swift */; };
@@ -184,6 +192,32 @@
 				7F88A6D221AF11DB0086D6BE /* Result.framework in CopyFiles */,
 				7F88A6D321AF11E10086D6BE /* AsyncAwait.framework in CopyFiles */,
 				7F88A6D421AF11E80086D6BE /* BaseOperation.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FA169A221E3944C00D8BA3F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7FA169A321E3947D00D8BA3F /* AsyncAwait.framework in CopyFiles */,
+				7FA169A521E3949200D8BA3F /* BaseOperation.framework in CopyFiles */,
+				7FA169A621E3949500D8BA3F /* Logging.framework in CopyFiles */,
+				7FA169A821E3949F00D8BA3F /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FA169A921E394B200D8BA3F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7FA169AA21E394B900D8BA3F /* BaseOperation.framework in CopyFiles */,
+				7FA169AB21E394BD00D8BA3F /* Logging.framework in CopyFiles */,
+				7FA169AC21E394C000D8BA3F /* AsyncAwait.framework in CopyFiles */,
+				7FA169AE21E394C900D8BA3F /* Result.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +647,7 @@
 				7F88A67521AF0FA00086D6BE /* Sources */,
 				7F88A67621AF0FA00086D6BE /* Frameworks */,
 				7F88A67721AF0FA00086D6BE /* Resources */,
+				7FA169A221E3944C00D8BA3F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -631,6 +666,7 @@
 				7F88A68421AF0FB00086D6BE /* Sources */,
 				7F88A68521AF0FB00086D6BE /* Frameworks */,
 				7F88A68621AF0FB00086D6BE /* Resources */,
+				7FA169A921E394B200D8BA3F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -1288,6 +1324,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = "NetworkingTests-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1310,6 +1347,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = "NetworkingTests-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1332,6 +1370,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = "NetworkingTests-tvOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1354,6 +1393,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFC77GK3D7;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/tvOS";
 				INFOPLIST_FILE = "NetworkingTests-tvOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
