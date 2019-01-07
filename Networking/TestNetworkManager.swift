@@ -1,8 +1,8 @@
 import AsyncAwait
 import Foundation
-import Logging
+import Result
 
-public final class TestNetworkManager: NetworkManaging {
+open class TestNetworkManager: NetworkManaging {
     private let fetchStubs: [FetchStub]?
     private let downloadStubs: [DownloadStub]?
 
@@ -11,37 +11,56 @@ public final class TestNetworkManager: NetworkManaging {
         self.downloadStubs = downloadStubs
     }
 
-    public func fetch<T: Response>(request: Request) -> Async<T> {
+    open func fetch<T: Response>(request: Request) -> Async<T> {
         return Async { completion in
-            guard let stub = self.fetchStubs?.first(where: { $0.url == request.url }) else {
-                assertionFailure("expected stub for \(request.url)")
-                return
-            }
-            do {
-                let response = try T(data: stub.resource.load())
-                completion(.success(response))
-            } catch {
-                logError(error.localizedDescription)
-                completion(.failure(NetworkError.badResponse(error)))
+            switch self.getStub(from: self.fetchStubs, forURL: request.url) {
+            case .success(let stub):
+                do {
+                    let response = try T(data: stub.resource.load())
+                    completion(.success(response))
+                } catch {
+                    NetworkLog.error(error.localizedDescription)
+                    completion(.failure(NetworkError.badResponse(error)))
+                }
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }
 
-    public func download(_ url: URL, option: FileDownloadOption) -> Async<URL> {
+    open func download(_ url: URL, option: FileDownloadOption) -> Async<URL> {
         return Async { completion in
-            guard let stub = self.downloadStubs?.first(where: { $0.url == url }) else {
-                assertionFailure("expected stub for \(url)")
-                return
-            }
-            do {
-                try stub.data.write(to: stub.writeURL)
-                completion(.success(stub.writeURL))
-            } catch {
-                logError(error.localizedDescription)
-                completion(.failure(NetworkError.badResponse(error)))
+            switch self.getStub(from: self.downloadStubs, forURL: url) {
+            case .success(let stub):
+                do {
+                    try stub.data.write(to: stub.writeURL)
+                    completion(.success(stub.writeURL))
+                } catch {
+                    NetworkLog.error(error.localizedDescription)
+                    completion(.failure(NetworkError.badResponse(error)))
+                }
+            case .failure(let error):
+                completion(.failure(error))
             }
         }
     }
 
-    public func cancelAll() {}
+    open func cancelAll() {}
+
+    // MARK: - private
+
+    private func getStub<T: NetworkStub>(from stubs: [T]?, forURL url: URL) -> Result<T> {
+        guard let stub = stubs?.first(where: { $0.url == url }) else {
+            return .failure(NetworkError.noData)
+        }
+        if !stub.statusCode.isValidRange {
+            return .failure(NetworkError.httpErrorCode(stub.statusCode))
+        }
+        if let error = stub.error {
+            return .failure(error.isURLErrorCancelled ?
+                NetworkError.cancelled : NetworkError.systemError(error)
+            )
+        }
+        return .success(stub)
+    }
 }

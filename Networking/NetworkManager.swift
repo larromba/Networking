@@ -11,6 +11,10 @@ public protocol NetworkManaging: Mockable {
 }
 
 public final class NetworkManager: NetworkManaging {
+    private enum FileName: String {
+        case tmp = ".tmp"
+    }
+
     private let urlSession: URLSessioning
     private let fileManager: FileManaging
     private let queue: OperationQueable
@@ -31,22 +35,14 @@ public final class NetworkManager: NetworkManaging {
                     defer {
                         operation?.finish()
                     }
-                    if let error = error {
-                        completion(.failure(error.isURLErrorCancelled ?
-                            NetworkError.cancelled : NetworkError.systemError(error)
-                            ))
+                    if let error = self.validate(error: error, response: response) {
+                        NetworkLog.error(error.localizedDescription)
+                        completion(.failure(error))
                         return
                     }
                     guard let data = data else {
+                        NetworkLog.error(NetworkError.noData)
                         completion(.failure(NetworkError.noData))
-                        return
-                    }
-                    guard let httpResponse = response as? HTTPURLResponse else {
-                        completion(.failure(NetworkError.httpErrorCode(500)))
-                        return
-                    }
-                    guard httpResponse.isValidRange else {
-                        completion(.failure(NetworkError.httpErrorCode(httpResponse.statusCode)))
                         return
                     }
                     do {
@@ -54,6 +50,7 @@ public final class NetworkManager: NetworkManaging {
                         let response = try T(data: data)
                         completion(.success(response))
                     } catch {
+                        NetworkLog.error("could not fetch: \(request.httpVerb) ...\(request.url.lastPathComponent)")
                         completion(.failure(NetworkError.badResponse(error)))
                     }
                 }
@@ -70,25 +67,16 @@ public final class NetworkManager: NetworkManaging {
                 defer {
                     operation?.finish()
                 }
-                if let error = error {
-                    completion(.failure(error.isURLErrorCancelled ?
-                        NetworkError.cancelled : NetworkError.systemError(error)
-                        ))
+                if let error = self.validate(error: error, response: response) {
+                    NetworkLog.error(error.localizedDescription)
+                    completion(.failure(error))
                     return
                 }
                 guard let tempURL = tempURL else {
+                    NetworkLog.error(NetworkError.noData)
                     completion(.failure(NetworkError.noData))
                     return
                 }
-                guard let httpResponse = response as? HTTPURLResponse else {
-                    completion(.failure(NetworkError.httpErrorCode(500)))
-                    return
-                }
-                guard httpResponse.isValidRange else {
-                    completion(.failure(NetworkError.httpErrorCode(httpResponse.statusCode)))
-                    return
-                }
-
                 // must rename / move file else it's removed
                 // see https://developer.apple.com/documentation/foundation/urlsession/1411511-downloadtask
                 NetworkLog.info("downloaded: ...\(url.lastPathComponent) temporarilly to: \(tempURL)")
@@ -97,6 +85,7 @@ public final class NetworkManager: NetworkManaging {
                     NetworkLog.info("moved: ...\(url.lastPathComponent) finally to: \(fileURL)")
                     completion(.success(fileURL))
                 case .failure(let error):
+                    NetworkLog.error("could not move file \(url.lastPathComponent): \(error.localizedDescription)")
                     completion(.failure(error))
                 }
             }
@@ -110,6 +99,20 @@ public final class NetworkManager: NetworkManaging {
 
     // MARK: - private
 
+    private func validate(error: Error?, response: URLResponse?) -> Error? {
+        if let error = error {
+            return error.isURLErrorCancelled ?
+                NetworkError.cancelled : NetworkError.systemError(error)
+        }
+        guard let httpResponse = response as? HTTPURLResponse else {
+            return NetworkError.httpErrorCode(500)
+        }
+        guard httpResponse.statusCode.isValidRange else {
+            return NetworkError.httpErrorCode(httpResponse.statusCode)
+        }
+        return nil
+    }
+
     // swiftlint:disable pattern_matching_keywords
     private func moveFile(at fileURL: URL, withOption option: FileDownloadOption) -> Result<URL> {
         let newFileURL: URL
@@ -119,10 +122,12 @@ public final class NetworkManager: NetworkManaging {
         case .moveReplaceName(let folderURL, let newFileName):
             newFileURL = URL(fileURLWithPath: folderURL.appendingPathComponent(newFileName).path)
         case .moveReplaceExtension(let folderURL, let newFileExtension):
-            let newFileName = folderURL.path.replacingOccurrences(of: ".tmp", with: newFileExtension)
+            let newFileName = fileURL.lastPathComponent
+                .replacingOccurrences(of: FileName.tmp.rawValue, with: newFileExtension)
             newFileURL = URL(fileURLWithPath: folderURL.appendingPathComponent(newFileName).path)
         case .replaceExtension(let newFileExtension):
-            let newFileName = fileURL.path.replacingOccurrences(of: ".tmp", with: newFileExtension)
+            let newFileName = fileURL.path
+                .replacingOccurrences(of: FileName.tmp.rawValue, with: newFileExtension)
             newFileURL = URL(fileURLWithPath: newFileName)
         }
         do {
@@ -131,21 +136,5 @@ public final class NetworkManager: NetworkManaging {
         } catch {
             return .failure(error)
         }
-    }
-}
-
-// MARK: - HTTPURLResponse
-
-private extension HTTPURLResponse {
-    var isValidRange: Bool {
-        return statusCode >= 200 && statusCode < 400
-    }
-}
-
-// MARK: - Error
-
-private extension Error {
-    var isURLErrorCancelled: Bool {
-        return (self as NSError).code == NSURLErrorCancelled
     }
 }

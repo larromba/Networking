@@ -53,3 +53,6 @@ func doRequest() -> Async<MyObject> {
 
 ## Contact
 larromba@gmail.com
+
+## Future work
+* fetch / download stubs could contain more info, like return a 200 / 500 etc

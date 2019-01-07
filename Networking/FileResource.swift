@@ -1,5 +1,4 @@
 import Foundation
-import Logging
 
 public struct FileResource {
     public let name: String
@@ -13,15 +12,15 @@ public struct FileResource {
     public func load() -> Data {
         let components = name.components(separatedBy: ".")
         guard let fileName = components.first, let fileExt = components.last else {
-            logError("invalid fileName: \(self)")
+            NetworkLog.error("invalid fileName: \(self)")
             return Data()
         }
         guard let url = bundle.url(forResource: fileName, withExtension: fileExt) else {
-            logError("missing resource url")
+            NetworkLog.error("missing resource url")
             return Data()
         }
         guard let data = try? Data(contentsOf: url) else {
-            logError("missing resource data")
+            NetworkLog.error("missing resource data")
             return Data()
         }
         return data
