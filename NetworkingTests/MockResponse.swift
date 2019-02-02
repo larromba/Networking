@@ -1,9 +1,10 @@
 import Foundation
 @testable import Networking
 
-struct BadResponse: Response {
+struct MockResponse: Response {
     let data: Data
+
     init(data: Data) throws {
-        throw MockError.error
+        self.data = data
     }
 }

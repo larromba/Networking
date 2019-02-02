@@ -29,6 +29,9 @@
 		7F02A57421AB6D8B007A6ECD /* HTTPVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */; };
 		7F02A57621AB6DE1007A6ECD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57521AB6DE1007A6ECD /* NetworkError.swift */; };
 		7F02A57D21AB6FED007A6ECD /* mocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */; };
+		7F06F34C22063E7A008F1403 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06F34B22063E7A008F1403 /* DataExtensions.swift */; };
+		7F06F34D22063E7A008F1403 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06F34B22063E7A008F1403 /* DataExtensions.swift */; };
+		7F06F34E22063E7A008F1403 /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F06F34B22063E7A008F1403 /* DataExtensions.swift */; };
 		7F88A65921AF0F200086D6BE /* NetworkLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F88A65821AF0F200086D6BE /* NetworkLog.swift */; };
 		7F88A66421AF0F700086D6BE /* Networking_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F88A66221AF0F700086D6BE /* Networking_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7F88A67121AF0F7E0086D6BE /* Networking_tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F88A66F21AF0F7E0086D6BE /* Networking_tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -247,6 +250,7 @@
 		7F02A57321AB6D8B007A6ECD /* HTTPVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPVerb.swift; sourceTree = "<group>"; };
 		7F02A57521AB6DE1007A6ECD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		7F02A57C21AB6FED007A6ECD /* mocks.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mocks.generated.swift; sourceTree = "<group>"; };
+		7F06F34B22063E7A008F1403 /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
 		7F88A65821AF0F200086D6BE /* NetworkLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLog.swift; sourceTree = "<group>"; };
 		7F88A66021AF0F700086D6BE /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F88A66221AF0F700086D6BE /* Networking_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking_iOS.h; sourceTree = "<group>"; };
@@ -351,7 +355,7 @@
 				7F02A52F21AB642B007A6ECD /* Networking-macOS */,
 				7F88A66121AF0F700086D6BE /* Networking-iOS */,
 				7F88A66E21AF0F7E0086D6BE /* Networking-tvOS */,
-				7F88A6C421AF11180086D6BE /* NetworkManagerTests */,
+				7F88A6C421AF11180086D6BE /* NetworkingTests */,
 				7F02A53A21AB642B007A6ECD /* NetworkingTests-macOS */,
 				7F88A67A21AF0FA00086D6BE /* NetworkingTests-iOS */,
 				7F88A68921AF0FB00086D6BE /* NetworkingTests-tvOS */,
@@ -493,7 +497,7 @@
 			path = "NetworkingTests-tvOS";
 			sourceTree = "<group>";
 		};
-		7F88A6C421AF11180086D6BE /* NetworkManagerTests */ = {
+		7F88A6C421AF11180086D6BE /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
 				7F02A53B21AB642B007A6ECD /* FetchTests.swift */,
@@ -501,7 +505,7 @@
 				7FA1699B21E3841800D8BA3F /* Utility */,
 				7FA1699D21E3842A00D8BA3F /* Extensions */,
 			);
-			path = NetworkManagerTests;
+			path = NetworkingTests;
 			sourceTree = "<group>";
 		};
 		7FA1697A21DF79C900D8BA3F /* Extensions */ = {
@@ -509,6 +513,7 @@
 			children = (
 				7FA1697221DF72D200D8BA3F /* ErrorExtensions.swift */,
 				7FA1697621DF72E300D8BA3F /* IntExtensions.swift */,
+				7F06F34B22063E7A008F1403 /* DataExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -829,6 +834,7 @@
 				7F02A55721AB667A007A6ECD /* URLSessioning.swift in Sources */,
 				7F02A54C21AB64AD007A6ECD /* TestNetworkManager.swift in Sources */,
 				7F88A65921AF0F200086D6BE /* NetworkLog.swift in Sources */,
+				7F06F34C22063E7A008F1403 /* DataExtensions.swift in Sources */,
 				7F02A55F21AB695F007A6ECD /* Mockable.swift in Sources */,
 				7F02A57421AB6D8B007A6ECD /* HTTPVerb.swift in Sources */,
 				7F02A57221AB6D77007A6ECD /* FileDownloadOption.swift in Sources */,
@@ -871,6 +877,7 @@
 				7F88A6A721AF0FCB0086D6BE /* Request.swift in Sources */,
 				7F88A6AC21AF0FCB0086D6BE /* Mockable.swift in Sources */,
 				7F88A69E21AF0FC80086D6BE /* DownloadStub.swift in Sources */,
+				7F06F34D22063E7A008F1403 /* DataExtensions.swift in Sources */,
 				7F88A69C21AF0FC80086D6BE /* HTTPVerb.swift in Sources */,
 				7F88A6A921AF0FCB0086D6BE /* FileManaging.swift in Sources */,
 				7F88A69521AF0FC40086D6BE /* TestNetworkManager.swift in Sources */,
@@ -898,6 +905,7 @@
 				7F88A6AD21AF0FCB0086D6BE /* Request.swift in Sources */,
 				7F88A6B221AF0FCB0086D6BE /* Mockable.swift in Sources */,
 				7F88A6A421AF0FC80086D6BE /* DownloadStub.swift in Sources */,
+				7F06F34E22063E7A008F1403 /* DataExtensions.swift in Sources */,
 				7F88A6A221AF0FC80086D6BE /* HTTPVerb.swift in Sources */,
 				7F88A6AF21AF0FCB0086D6BE /* FileManaging.swift in Sources */,
 				7F88A69921AF0FC40086D6BE /* TestNetworkManager.swift in Sources */,

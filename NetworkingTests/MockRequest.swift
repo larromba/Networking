@@ -4,7 +4,7 @@ import Foundation
 struct MockRequest: Request {
     var url: URL = .mock
     var httpVerb: HTTPVerb = .GET
-    var body: Data? = nil
-    var headers: [String: String]? = nil
-    var parameters: [String: String]? = nil
+    var body: Data?
+    var headers: [String: String]?
+    var parameters: [String: String]?
 }

@@ -47,6 +47,7 @@ public final class NetworkManager: NetworkManaging {
                     }
                     do {
                         NetworkLog.info("fetched: \(request.httpVerb) ...\(request.url.lastPathComponent)")
+                        NetworkLog.info("response:", data.jsonString, "\n")
                         let response = try T(data: data)
                         completion(.success(response))
                     } catch {
