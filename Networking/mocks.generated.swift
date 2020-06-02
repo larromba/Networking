@@ -230,12 +230,12 @@ public class MockNetworkManager: NSObject, NetworkManaging {
     // MARK: - fetch<T: Response>
 
     public 
-    func fetch<T: Response>(request: Request) -> Async<T> {
+    func fetch<T: Response>(request: Request) -> Async<T, NetworkError> {
         let functionName = fetch1.name
         let invocation = _Invocation(name: functionName.rawValue)
         invocation.set(parameter: request, forKey: fetch1.params.request)
         invocations.record(invocation)
-        return actions.returnValue(for: functionName) as! Async<T>
+        return actions.returnValue(for: functionName) as! Async<T, NetworkError>
     }
 
     public 
@@ -249,13 +249,13 @@ public class MockNetworkManager: NSObject, NetworkManaging {
     // MARK: - download
 
     public 
-    func download(_ url: URL, option: FileDownloadOption) -> Async<URL> {
+    func download(_ url: URL, option: FileDownloadOption) -> Async<URL, NetworkError> {
         let functionName = download2.name
         let invocation = _Invocation(name: functionName.rawValue)
         invocation.set(parameter: url, forKey: download2.params.url)
         invocation.set(parameter: option, forKey: download2.params.option)
         invocations.record(invocation)
-        return actions.returnValue(for: functionName) as! Async<URL>
+        return actions.returnValue(for: functionName) as! Async<URL, NetworkError>
     }
 
     public 

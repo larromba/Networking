@@ -1,47 +1,50 @@
 import AsyncAwait
 import Foundation
-import Result
 
 open class TestNetworkManager: NetworkManaging {
-    private let fetchStubs: [FetchStub]?
-    private let downloadStubs: [DownloadStub]?
+    private let fetchStubs: [FetchStub]
+    private let downloadStubs: [DownloadStub]
 
-    public init(fetchStubs: [FetchStub]?, downloadStubs: [DownloadStub]?) {
+    public init(fetchStubs: [FetchStub] = [], downloadStubs: [DownloadStub] = []) {
         self.fetchStubs = fetchStubs
         self.downloadStubs = downloadStubs
-    }
-
-    open func fetch<T: Response>(request: Request) -> Async<T> {
-        return Async { completion in
-            switch self.getStub(from: self.fetchStubs, forURL: request.url) {
-            case .success(let stub):
-                do {
-                    let response = try T(data: stub.resource.load())
-                    completion(.success(response))
-                } catch {
-                    NetworkLog.error(error.localizedDescription)
-                    completion(.failure(NetworkError.badResponse(error)))
-                }
-            case .failure(let error):
-                completion(.failure(error))
-            }
+        guard !fetchStubs.isEmpty || !downloadStubs.isEmpty else {
+            assertionFailure("please provide some stubs")
+            return
         }
     }
 
-    open func download(_ url: URL, option: FileDownloadOption) -> Async<URL> {
+    open func fetch<T: Response>(request: Request) -> Async<T, NetworkError> {
         return Async { completion in
-            switch self.getStub(from: self.downloadStubs, forURL: url) {
-            case .success(let stub):
-                do {
-                    try stub.data.write(to: stub.writeURL)
-                    completion(.success(stub.writeURL))
-                } catch {
-                    NetworkLog.error(error.localizedDescription)
-                    completion(.failure(NetworkError.badResponse(error)))
+            async({
+                let stub = try await(self.findAndProcessStub(in: self.fetchStubs, forURL: request.url))
+                let response = try T(data: stub.resource.load())
+                completion(.success(response))
+            }, onError: { error in
+                if let error = error as? NetworkError {
+                    completion(.failure(error))
+                } else {
+                    assertionFailure(error.localizedDescription)
+                    completion(.failure(.systemError(error)))
                 }
-            case .failure(let error):
-                completion(.failure(error))
-            }
+            })
+        }
+    }
+
+    open func download(_ url: URL, option: FileDownloadOption) -> Async<URL, NetworkError> {
+        return Async { completion in
+            async({
+                let stub = try await(self.findAndProcessStub(in: self.downloadStubs, forURL: url))
+                try stub.resource.data.write(to: stub.resource.writeURL)
+                completion(.success(stub.resource.writeURL))
+            }, onError: { error in
+                if let error = error as? NetworkError {
+                    completion(.failure(error))
+                } else {
+                    assertionFailure(error.localizedDescription)
+                    completion(.failure(.systemError(error)))
+                }
+            })
         }
     }
 
@@ -49,18 +52,25 @@ open class TestNetworkManager: NetworkManaging {
 
     // MARK: - private
 
-    private func getStub<T: NetworkStub>(from stubs: [T]?, forURL url: URL) -> Result<T> {
-        guard let stub = stubs?.first(where: { $0.url == url }) else {
-            return .failure(NetworkError.noData)
+    private func findAndProcessStub<T: NetworkStub>(in stubs: [T]?, forURL url: URL) -> Async<T, NetworkError> {
+        return Async { completion in
+            guard let stub = stubs?.first(where: { $0.url == url }) else {
+                assertionFailure("missing stub for url: \(url)")
+                completion(.failure(.noData))
+                return
+            }
+            if stub.delay > 0 {
+                Thread.sleep(forTimeInterval: stub.delay)
+            }
+            if let error = stub.error {
+                completion(.failure(error.isURLErrorCancelled ? .cancelled : .systemError(error)))
+                return
+            }
+            if !stub.statusCode.isValidRange {
+                completion(.failure(.httpErrorCode(stub.statusCode)))
+                return
+            }
+            completion(.success(stub))
         }
-        if !stub.statusCode.isValidRange {
-            return .failure(NetworkError.httpErrorCode(stub.statusCode))
-        }
-        if let error = stub.error {
-            return .failure(error.isURLErrorCancelled ?
-                NetworkError.cancelled : NetworkError.systemError(error)
-            )
-        }
-        return .success(stub)
     }
 }

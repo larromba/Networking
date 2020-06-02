@@ -1,12 +1,11 @@
 import AsyncAwait
 import Foundation
 import Logging
-import Result
 
 // sourcery: name = NetworkManager
 public protocol NetworkManaging: Mockable {
-    func fetch<T: Response>(request: Request) -> Async<T>
-    func download(_ url: URL, option: FileDownloadOption) -> Async<URL>
+    func fetch<T: Response>(request: Request) -> Async<T, NetworkError>
+    func download(_ url: URL, option: FileDownloadOption) -> Async<URL, NetworkError>
     func cancelAll()
 }
 
@@ -25,9 +24,8 @@ public final class NetworkManager: NetworkManaging {
         self.queue = queue
     }
 
-    public func fetch<T: Response>(request: Request) -> Async<T> {
+    public func fetch<T: Response>(request: Request) -> Async<T, NetworkError> {
         NetworkLog.info("fetching: \(request.httpVerb) \(request.url)")
-
         return Async { completion in
             let operation = NetworkOperation()
             operation.task = self.urlSession
@@ -42,7 +40,7 @@ public final class NetworkManager: NetworkManaging {
                     }
                     guard let data = data else {
                         NetworkLog.error(NetworkError.noData)
-                        completion(.failure(NetworkError.noData))
+                        completion(.failure(.noData))
                         return
                     }
                     do {
@@ -52,16 +50,15 @@ public final class NetworkManager: NetworkManaging {
                         completion(.success(response))
                     } catch {
                         NetworkLog.error("could not fetch: \(request.httpVerb) ...\(request.url.lastPathComponent)")
-                        completion(.failure(NetworkError.badResponse(error)))
+                        completion(.failure(.badResponse(error)))
                     }
                 }
             self.queue.addOperation(operation)
         }
     }
 
-    public func download(_ url: URL, option: FileDownloadOption) -> Async<URL> {
+    public func download(_ url: URL, option: FileDownloadOption) -> Async<URL, NetworkError> {
         NetworkLog.info("downloading: \(url)")
-
         return Async { completion in
             let operation = NetworkOperation()
             operation.task = self.urlSession.downloadTask(with: url) { [weak operation] tempURL, response, error in
@@ -75,7 +72,7 @@ public final class NetworkManager: NetworkManaging {
                 }
                 guard let tempURL = tempURL else {
                     NetworkLog.error(NetworkError.noData)
-                    completion(.failure(NetworkError.noData))
+                    completion(.failure(.noData))
                     return
                 }
                 // must rename / move file else it's removed
@@ -87,7 +84,7 @@ public final class NetworkManager: NetworkManaging {
                     completion(.success(fileURL))
                 case .failure(let error):
                     NetworkLog.error("could not move file \(url.lastPathComponent): \(error.localizedDescription)")
-                    completion(.failure(error))
+                    completion(.failure(.systemError(error)))
                 }
             }
             self.queue.addOperation(operation)
@@ -100,22 +97,21 @@ public final class NetworkManager: NetworkManaging {
 
     // MARK: - private
 
-    private func validate(error: Error?, response: URLResponse?) -> Error? {
+    private func validate(error: Error?, response: URLResponse?) -> NetworkError? {
         if let error = error {
-            return error.isURLErrorCancelled ?
-                NetworkError.cancelled : NetworkError.systemError(error)
+            return error.isURLErrorCancelled ? .cancelled : .systemError(error)
         }
         guard let httpResponse = response as? HTTPURLResponse else {
-            return NetworkError.httpErrorCode(500)
+            return .httpErrorCode(500)
         }
         guard httpResponse.statusCode.isValidRange else {
-            return NetworkError.httpErrorCode(httpResponse.statusCode)
+            return .httpErrorCode(httpResponse.statusCode)
         }
         return nil
     }
 
     // swiftlint:disable pattern_matching_keywords
-    private func moveFile(at fileURL: URL, withOption option: FileDownloadOption) -> Result<URL> {
+    private func moveFile(at fileURL: URL, withOption option: FileDownloadOption) -> Result<URL, Error> {
         let newFileURL: URL
         switch option {
         case .move(let folderURL):
