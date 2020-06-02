@@ -64,7 +64,7 @@ final class TestNetworkManagerTests: XCTestCase {
             let _: MockResponse? = try? await(networkManager.fetch(request: MockRequest()))
             let endTime = Date()
             // test
-            XCTAssertEqual(endTime.timeIntervalSince(startTime), delay, accuracy: 0.1)
+            XCTAssertEqual(endTime.timeIntervalSince(startTime), delay, accuracy: 0.2)
             completion()
         }
     }
@@ -127,7 +127,7 @@ final class TestNetworkManagerTests: XCTestCase {
             _ = try? await(networkManager.download(.mock, option: .move(folder: .mock)))
             let endTime = Date()
             // test
-            XCTAssertEqual(endTime.timeIntervalSince(startTime), delay, accuracy: 0.1)
+            XCTAssertEqual(endTime.timeIntervalSince(startTime), delay, accuracy: 0.2)
             completion()
         }
     }
