@@ -25,7 +25,8 @@ carthage update
 
 Create a request struct implementing the `Request` protocol, and a response struct implementing the `Response` protocol.
 
-```
+```swift
+
 struct MyResponse: Response {
     let data: Data
     let myObject: MyObject // this isn't in the protocol, but is a recommended pattern
@@ -55,7 +56,8 @@ func doRequest() -> Async<MyObject, NetworkError> {
 
 `TestNetworkManager` can be injected into your app to load mock json:
 
-```
+```swift
+
 final class MyNetworkStack {
     let networkManager: NetworkManaging // <-- must use NetworkManaging
 
