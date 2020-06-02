@@ -137,9 +137,11 @@ final class TestNetworkManagerTests: XCTestCase {
 
 private extension MockResponse {
     var json: [String: Any] {
-        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-            XCTFail("can't read json")
-            return [:]
+        guard
+            let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+            let json = jsonObject as? [String: Any] else {
+                XCTFail("can't read json")
+                return [:]
         }
         return json
     }
